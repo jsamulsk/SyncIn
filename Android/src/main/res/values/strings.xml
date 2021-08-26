@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Sync In</string>
+    <string name="new_user_hyperlink">here.</string>
+    <string name="root_address">https://f241a96d6b1f.ngrok.io</string>
+    <string name="my_preferences">edu.jsamulsk.syncin.shared_preferences</string>
+    <string name="ACTION_FOUND">edu.jsamulsk.syncin.action.FOUND</string>
+</resources>

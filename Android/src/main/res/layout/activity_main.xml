@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/addOtherUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical" >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Users you plan to connect with:"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"/>
+        <ListView
+            android:id="@+id/contactsListView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/light_gray"/>
+        <EditText
+            android:id="@+id/addContactEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Type email of person to be added" />
+        <Button
+            android:id="@+id/addContactButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Person" />
+        <Button
+            android:id="@+id/clearContactButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Clear List" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/setSearchConditionsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addOtherUserLayout"
+        app:layout_constraintBottom_toTopOf="@id/submitSearchButton">
+
+        <TextView
+            android:id="@+id/searchParametersTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search Parameters:"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/startTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Start Time: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchParametersTextView" />
+
+        <TextView
+            android:id="@+id/startDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="Start Date: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/startDateEditText"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/endTimeButtonTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="End Time: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/endTimeEditText"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/endDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text="End Date: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@id/endDateEditText"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/durationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="20dp"
+            android:text="Duration: "
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/endDateTextView"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <EditText
+            android:id="@+id/startTimeEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:hint="Tap to set start time"
+            app:layout_constraintBaseline_toBaselineOf="@id/startTimeTextView"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <EditText
+            android:id="@+id/startDateEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:hint="Tap to set start date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startTimeEditText" />
+
+        <EditText
+            android:id="@+id/endTimeEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:hint="Tap to set end time"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/startDateEditText" />
+
+        <EditText
+            android:id="@+id/endDateEditText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:cursorVisible="false"
+            android:hint="Tap to set end date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/endTimeEditText" />
+
+        <Spinner
+            android:id="@+id/durationDropdown"
+            android:spinnerMode="dropdown"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintTop_toBottomOf="@id/endDateEditText" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/submitSearchButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit and Search"
+        android:textSize="25sp"
+        android:backgroundTint="@color/green"
+        app:layout_constraintTop_toBottomOf="@id/setSearchConditionsLayout"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
