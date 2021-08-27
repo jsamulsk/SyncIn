@@ -80,4 +80,4 @@ The Server folder contains the source code for the PHP API. There are two helper
   </li>
 </ul>
 
-Full report on the app can be found here: https://www.dropbox.com/s/lfbm788x7djvr2m/Samulski_Joseph_SyncIn-Report.pdf?dl=0
+Full report on the app can be found <a href="https://www.dropbox.com/s/lfbm788x7djvr2m/Samulski_Joseph_SyncIn-Report.pdf?dl=0">here.</a>
